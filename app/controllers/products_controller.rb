@@ -11,11 +11,16 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(
-      name: "Playstation 5",
-      price: 500,
-      image_url: "https://assets-prd.ignimgs.com/2020/11/16/ps5-disc-1605555492213.png",
-      description: "Play video games!",
+      name: params["name"],
+      price: params["price"],
+      image_url: params["image_url"],
+      description: params["description"],
     )
     render :show
   end
+
+  # def delete
+  #   @product = Product.destroy_by(id: params["id"])
+  #   render :show
+  # end
 end
