@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   patch "/products/:id" => "products#update"
 
-  # delete "/product/:id" => "products#destory"
+  delete "/products/:id" => "products#destroy"
 end
