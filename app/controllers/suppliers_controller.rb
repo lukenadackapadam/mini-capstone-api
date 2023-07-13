@@ -1,0 +1,14 @@
+class SuppliersController < ApplicationController
+  def create
+    @supplier = Supplier.create(
+      name: params["name"],
+      email: params["email"],
+      phone_number: params["phone_number"],
+    )
+    if @supplier.save
+      render :show
+    else
+      render json: { errors: @supplier.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
+end
