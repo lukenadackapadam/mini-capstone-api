@@ -1,4 +1,9 @@
 class SuppliersController < ApplicationController
+  def all_suppliers
+    @suppliers = Supplier.all
+    render :index
+  end
+
   def create
     @supplier = Supplier.create(
       name: params["name"],

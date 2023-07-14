@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   delete "/products/:id" => "products#destroy"
 
+  get "/suppliers" => "suppliers#all_suppliers"
+
   get "/suppliers" => "suppliers#create"
 
   delete "/suppliers/:id" => "suppliers#destroy"
