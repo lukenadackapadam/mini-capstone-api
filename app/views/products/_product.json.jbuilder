@@ -1,6 +1,6 @@
 json.id product.id
 json.name product.name
-json.image_id product.image_id
+json.image product.image
 json.price product.price
 json.is_discounted? product.is_discounted?
 json.tax product.tax
