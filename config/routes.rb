@@ -9,9 +9,17 @@ Rails.application.routes.draw do
 
   delete "/products/:id" => "products#destroy"
 
+  #BREAK#
+
   get "/suppliers" => "suppliers#all_suppliers"
 
-  get "/suppliers" => "suppliers#create"
+  post "/suppliers" => "suppliers#create"
 
   delete "/suppliers/:id" => "suppliers#destroy"
+
+  #BREAK#
+
+  get "/images" => "images#all_images"
+
+  post "/images" => "images#create"
 end
