@@ -1,7 +1,7 @@
-Supplier.create!([
-  { name: "Amazon", email: "Amazon@amazon.com", phone_number: "1112223334" },
-  { name: "Costco", email: "Costco@gmail.com", phone_number: "1112223456" },
-])
+# Supplier.create!([
+#   { name: "Amazon", email: "Amazon@amazon.com", phone_number: "1112223334" },
+#   { name: "Costco", email: "Costco@gmail.com", phone_number: "1112223456" },
+# ])
 
 # product = Product.create(name: "Portable Charger", price: 50, image_url: "https://m.media-amazon.com/images/I/61Fs2NAB7CL.__AC_SX300_SY300_QL70_FMwebp_.jpg", description: "Fast-charging and long-lasting portable charger.")
 
