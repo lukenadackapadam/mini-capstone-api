@@ -11,4 +11,10 @@ class SuppliersController < ApplicationController
       render json: { errors: @supplier.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    supplier = Supplier.find_by(id: params["id"])
+    supplier.destroy
+    render json: { message: "Deleted!" }
+  end
 end
