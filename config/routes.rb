@@ -26,4 +26,8 @@ Rails.application.routes.draw do
   #BREAK#
 
   post "/users" => "users#create"
+
+    #BREAK#
+
+  post "/sessions" => "sessions#create"
 end
