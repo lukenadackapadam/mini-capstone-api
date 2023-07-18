@@ -22,4 +22,8 @@ Rails.application.routes.draw do
   get "/images" => "images#all_images"
 
   post "/images" => "images#create"
+
+  #BREAK#
+
+  post "/users" => "users#create"
 end
