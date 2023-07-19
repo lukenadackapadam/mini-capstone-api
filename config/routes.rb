@@ -27,7 +27,15 @@ Rails.application.routes.draw do
 
   post "/users" => "users#create"
 
-    #BREAK#
+  #BREAK#
 
   post "/sessions" => "sessions#create"
+
+  #BREAK#
+
+  post "/orders" => "orders#create"
+
+  get "/orders" => "orders#index"
+
+  get "/orders/:id" => "orders#show"
 end

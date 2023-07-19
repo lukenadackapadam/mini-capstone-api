@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def all_products
+    pp current_user
     @products = Product.all
     render :index
   end
@@ -14,6 +15,7 @@ class ProductsController < ApplicationController
       name: params["name"],
       price: params["price"],
       description: params["description"],
+      quantity: params["quantity"],
     )
     if @product.save
       render :show
@@ -29,6 +31,7 @@ class ProductsController < ApplicationController
       price: params["price"] || @product.price,
       description: params["description"] || @product.description,
       image_id: params["image_id"] || @product.image_id,
+      quantity: params["quantity"] || @product.quantity,
     )
     if @product.save
       render :show
