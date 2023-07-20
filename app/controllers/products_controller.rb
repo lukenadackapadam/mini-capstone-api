@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin, except: [:all_products, :one_product]
+
   def all_products
     pp current_user
     @products = Product.all
