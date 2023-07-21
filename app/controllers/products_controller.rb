@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
       price: params["price"],
       description: params["description"],
       quantity: params["quantity"],
+      supplier_id: params["supplier_id"],
     )
     if @product.save
       render :show
