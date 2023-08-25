@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :authenticate_admin, except: [:all_products, :one_product]
 
   def all_products
-    pp current_user
+    # pp current_user
     @products = Product.all
     render :index
   end
@@ -46,6 +46,6 @@ class ProductsController < ApplicationController
   def destroy
     product = Product.find_by(id: params["id"])
     product.destroy
-    render json: { message: "Recipe deleted!" }
+    render json: { message: "Product deleted!" }
   end
 end
